@@ -1,0 +1,100 @@
+create database hotel;
+use hotel;
+create table room(
+Roomno varchar(30),
+Rtype varchar(30),
+Options varchar(30),
+Status varchar(30),
+Price decimal
+);
+insert into room values ('D201','Double Room','Single Bath','Vacant',80.00);
+insert into room values ('D202','Double Room','Single Bath','Vacant',80.00);
+insert into room values ('D203','Double Room','Single Bath','Vacant',80.00);
+insert into room values ('D204','Double Room','Single Bath','Vacant',80.00);
+insert into room values ('D205','Double Room','Double Bath','Occupied',90.00);
+insert into room values ('D206','Double Room','Double Bath','Vacant',90.00);
+insert into room values ('D207','Double Room','Double Bath','Occupied',90.00);
+insert into room values ('PH401','Penthouse','Double Room + 1 kids Room','Occupied',200.00);
+insert into room values ('PH402','Penthouse','Triple Room + 2 kids Room','Occupied',250.00);
+insert into room values ('S101','Single Room','Single Bed','Vacant',30.00);
+insert into room values ('S102','Single Room','Single Bed','Vacant',30.00);
+insert into room values ('S103','Single Room','Single Bed','Occupied',30.00);
+insert into room values ('S104','Single Room','Single Bed','Vacant',30.00);
+insert into room values ('S105','Single Room','Double Bed','Vacant',50.00);
+insert into room values ('S106','Single Room','Double Bed','Vacant',50.00);
+insert into room values ('S107','Single Room','Double Bed','Occupied',50.00);
+insert into room values ('S108','Single Room','Double Bed','Occupied',50.00);
+insert into room values ('ST301','Suite Room','Single Room- Single Bath','Vacant',120.00);
+insert into room values ('ST302','Suite Room','Single Room- Single Bath','Vacant',120.00);
+insert into room values ('ST303','Suite Room','Double Room- Double Bath','Vacant',140.00);
+insert into room values ('ST304','Suite Room','Double Room- Double Bath','Vacant',140.00);
+insert into room values ('ST305','Suite Room','Triple Room- Triple Bath','Vacant',160.00);
+
+create table food(
+code varchar(30),
+Type varchar(80),
+Dish varchar(80),
+Item varchar(80),
+Price decimal
+);
+
+insert into food values ('IDB1','Breakfast','Indian Dish','Masala Dosa Sambar/Chutney',1.00);
+insert into food values ('IDB2','Breakfast','Indian Dish','Idly Sambar/ Chutney',1.00);
+insert into food values ('IDB3','Breakfast','Indian Dish','Palak Paratha (2ps)',1.20);
+insert into food values ('IDB4','Breakfast','Indian Dish','Aloo Paratha (2ps)',1.20);
+insert into food values ('IDB5','Breakfast','Indian Dish','Paav Bhaji',0.70);
+insert into food values ('IDB6','Breakfast','Indian Dish','Poori Bhaji (4ps)',1.30);
+insert into food values ('IDB7','Breakfast','Indian Dish','Poori Chana (4ps)',1.30);
+insert into food values ('IDB8','Breakfast','Indian Dish','Grand Tiffin (Dosa, Idly, Vada, Poori bhaji, sambar, chutney)',1.50);
+
+insert into food values ('IDL1','Lunch','Indian Dish','Veg Biriyani',1.20);
+insert into food values ('IDL2','Lunch','Indian Dish','Chicken Biriyani',1.40);
+insert into food values ('IDL3','Lunch','Indian Dish','Fried Rice w/ Butter Chicken',1.50);
+insert into food values ('IDL4','Lunch','Indian Dish','Fried Rice w/ Gobi Manchurian',1.50);
+insert into food values ('IDL5','Lunch','Indian Dish','Lemon Rice w/ curd',1.00);
+insert into food values ('IDL6','Lunch','Indian Dish','White Rice w/ chicken',0.80);
+insert into food values ('IDL7','Lunch','Indian Dish','White Rice w/ fish',0.90);
+insert into food values ('IDD1','Dinner','Indian Dish','Roti (4ps) w/ Paneer tikka',1.00);
+insert into food values ('IDD2','Dinner','Indian Dish','Roti (4ps) w/ Palak Paneer',1.20);
+insert into food values ('IDD3','Dinner','Indian Dish','Roti (4ps) w/ Butter Chicken',1.20);
+insert into food values ('IDD4','Dinner','Indian Dish','Roti (4ps) w/ dal',1.00);
+insert into food values ('IDD5','Dinner','Indian Dish','Roti (4ps) w/ Gobi Manchurian',1.30);
+insert into food values ('IDD6','Dinner','Indian Dish','Aloo Paratha (2ps)',1.20);
+
+insert into food values ('CD1',NULL,'Chinese Dish','Chinese Noodles',1.20);
+insert into food values ('CD2',NULL,'Chinese Dish','Kung Pao Chicken',1.00);
+insert into food values ('CD3',NULL,'Chinese Dish','Pekin Duck',1.50);
+insert into food values ('CD4',NULL,'Chinese Dish','Scallion pancakes',1.20);
+insert into food values ('S1',NULL,'Soup','Hot and Sour soup',0.80);
+insert into food values ('S2',NULL,'Soup','Chicken Soup',1.00);
+insert into food values ('S3',NULL,'Soup','Mushroom Soup',1.00);
+insert into food values ('HB1',NULL,'Hot Beverage','Milk Tea',0.20);
+insert into food values ('HB2',NULL,'Hot Beverage','Ginger Tea',0.40);
+insert into food values ('HB3',NULL,'Hot Beverage','Iced Tea',0.50);
+insert into food values ('HB4',NULL,'Hot Beverage','Milk Coffee',0.50);
+insert into food values ('HB5',NULL,'Hot Beverage','Black Coffee',0.40);
+insert into food values ('HB6',NULL,'Hot Beverage','Cappuccino',0.80);
+insert into food values ('HB7',NULL,'Hot Beverage','Iced Coffee',0.50);
+insert into food values ('HB8',NULL,'Hot Beverage','Hot Chocolate',0.80);
+insert into food values ('J1',NULL,'Juice','Apple (medium)',0.80);
+insert into food values ('J2',NULL,'Juice','Mango (medium)',0.80);
+insert into food values ('J3',NULL,'Juice','Orange (medium)',0.80);
+insert into food values ('J4',NULL,'Juice','Cocktail (medium)',1.00);
+
+create table guest(
+code varchar(30),
+Name varchar(80),
+Regdate date,
+adults integer,
+child integer,
+cindate date,
+output date,
+status vatchar(20),
+days integer
+total decimal
+food decimal
+service decimal
+totalcost decimal
+);
+
+
